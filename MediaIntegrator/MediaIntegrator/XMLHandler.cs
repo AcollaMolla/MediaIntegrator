@@ -10,11 +10,11 @@ namespace MediaIntegrator
 {
     class XMLHandler
     {
-        public List<Item> readFromXML()
+        public List<Item> readFromXML(string fileName)
         {
             try
             {
-                using (var reader = new StreamReader("frSimpleMedia/store.xml"))
+                using (var reader = new StreamReader(fileName))
                 {
                     XmlRootAttribute root = new XmlRootAttribute();
                     root.ElementName = "Inventory";
@@ -34,7 +34,7 @@ namespace MediaIntegrator
         {
             if (list != null)
             {
-                using (var writer = new StreamWriter("tillSimpleMedia/store.xml"))
+                using (var writer = new StreamWriter("tillSimpleMedia/simplemedia.xml"))
                 {
                     XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
                     ns.Add("", "");

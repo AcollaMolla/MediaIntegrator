@@ -12,8 +12,8 @@ namespace MediaIntegrator
         FileSystemWatcher[] watcher;
         string pathForCSV = "frMediaShop";
         string pathForXML = "frSimpleMedia";
-        string filterForCSV = "store.csv";
-        string filterForXML = "store.xml";
+        string filterForCSV = "*.csv";
+        string filterForXML = "*.xml";
 
         public FileWatcher()
         {
@@ -53,8 +53,8 @@ namespace MediaIntegrator
         {
             var translator = new Translator();
             var src = (FileSystemWatcher)source;
-            if (src.Path.Equals("frMediaShop")) translator.translateFromCSV();
-            else if (src.Path.Equals("frSimpleMedia")) translator.translateFromXML();
+            if (src.Path.Equals("frMediaShop")) translator.translateFromCSV(e.FullPath);
+            else if (src.Path.Equals("frSimpleMedia")) translator.translateFromXML(e.FullPath);
         }
 
         private void createFolders()//Check if all required folders exist. If not, create them.

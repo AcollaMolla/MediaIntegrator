@@ -10,11 +10,11 @@ namespace MediaIntegrator
 {
     class CSVHandler
     {
-        public List<Item> ReadFromCSV()
+        public List<Item> ReadFromCSV(string fileName)
         {
             try
             {
-                using (var reader = new StreamReader("frMediaShop/store.csv"))
+                using (var reader = new StreamReader(fileName))
                 using (var csv = new CsvReader(reader))
                 {
                     csv.Configuration.Delimiter = ";";
