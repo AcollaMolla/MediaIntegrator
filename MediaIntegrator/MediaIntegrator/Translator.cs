@@ -19,12 +19,14 @@ namespace MediaIntegrator
         }
         public void translateFromCSV()
         {
+            Console.WriteLine("[!]Found CSV file. Converting to XML...");
             products.setProductsList(csvhandler.ReadFromCSV());
             xmlhandler.writeToXML(products.getProducts());
         }
 
         public void translateFromXML()
         {
+            Console.WriteLine("[!]Found XML file. Converting to CSV...");
             products.setProductsList(xmlhandler.readFromXML());
             csvhandler.writeToCSV(products.getProducts());
         }

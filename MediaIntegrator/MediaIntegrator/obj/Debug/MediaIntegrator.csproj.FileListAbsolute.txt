@@ -22,3 +22,15 @@ C:\Users\antoengm100\source\repos\MediaIntegrator\MediaIntegrator\obj\Debug\Medi
 \\cifs-s1\home$\antoengm100\Desktop\old_repos\repos\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.csproj.CopyComplete
 \\cifs-s1\home$\antoengm100\Desktop\old_repos\repos\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.exe
 \\cifs-s1\home$\antoengm100\Desktop\old_repos\repos\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.pdb
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\MediaIntegrator.exe.config
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\MediaIntegrator.exe
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\MediaIntegrator.pdb
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\CsvHelper.dll
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\System.ValueTuple.dll
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\CsvHelper.xml
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\bin\Debug\System.ValueTuple.xml
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.csproj.CoreCompileInputs.cache
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.csproj.CopyComplete
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.exe
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.pdb
+C:\Users\antoengm100\Source\Repos\MediaIntegrator\MediaIntegrator\MediaIntegrator\obj\Debug\MediaIntegrator.csprojAssemblyReference.cache

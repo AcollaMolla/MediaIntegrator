@@ -7,14 +7,15 @@ using System.Xml.Serialization;
 
 namespace MediaIntegrator
 {
+    [XmlRoot("Inventory")]
     public class Item
     {
         private string name;
         private int id;
-        private float price;
+        private string price;
         private int qty;
 
-        public Item(string name, int id, float price, int qty)
+        public Item(string name, int id, string price, int qty)
         {
             this.name = name;
             this.id = id;
@@ -54,7 +55,7 @@ namespace MediaIntegrator
         }
 
         [XmlElement("Price")]
-        public float Price
+        public string Price
         {
             get
             {

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaIntegrator", "MediaIntegrator\MediaIntegrator.csproj", "{80E15BBF-7812-4077-A17D-DA0A59F84888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualStore", "..\virtualstore\VirtualStore\VirtualStore.csproj", "{D8AD1F85-215A-4612-A72A-0007D3103CDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualStore", "..\..\virtualstore\VirtualStore\VirtualStore.csproj", "{D8AD1F85-215A-4612-A72A-0007D3103CDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

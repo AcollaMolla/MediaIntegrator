@@ -18,7 +18,7 @@ namespace MediaIntegrator
                 {
                     XmlRootAttribute root = new XmlRootAttribute();
                     root.ElementName = "Inventory";
-                    root.IsNullable = true;
+                    //root.IsNullable = false;
                     XmlSerializer xml = new XmlSerializer(typeof(List<Item>), root);
                     List<Item> list = (List<Item>)xml.Deserialize(reader);
                     return list;

@@ -13,7 +13,7 @@ namespace MediaIntegrator
         string pathForCSV = "frMediaShop";
         string pathForXML = "frSimpleMedia";
         string filterForCSV = "store.csv";
-        string filterForXML = "store.xml"; //CHANGE THIS!!!
+        string filterForXML = "store.xml";
 
         public FileWatcher()
         {
