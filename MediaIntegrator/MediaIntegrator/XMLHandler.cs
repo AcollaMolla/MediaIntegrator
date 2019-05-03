@@ -26,22 +26,47 @@ namespace MediaIntegrator
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                if (e.GetBaseException().GetType() == typeof(System.IO.IOException))
+                {
+                    Console.WriteLine("[!]Multiple processes are trying to access this file. Trying to re-read...");
+                }
+                else if (e.GetBaseException().GetType() == typeof(System.Xml.XmlException))
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ERROR]Illegal XML format! Aborting!");
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ERROR]The following error occured: " + e);
+                }
+                Console.BackgroundColor = ConsoleColor.Black;
                 return null;
             }
         }
         public void writeToXML(List<Item> list)
         {
-            if (list != null)
+            try
             {
-                using (var writer = new StreamWriter("tillSimpleMedia/simplemedia.xml"))
+                if (list != null)
                 {
-                    XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-                    ns.Add("", "");
-                    XmlSerializer xml = new XmlSerializer(typeof(List<Item>), new XmlRootAttribute("Inventory"));
-                    xml.Serialize(writer, list, ns);
-                    Console.Out.WriteLine(writer.ToString());
+                    using (var writer = new StreamWriter("tillSimpleMedia/simplemedia.xml"))
+                    {
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", "");
+                        XmlSerializer xml = new XmlSerializer(typeof(List<Item>), new XmlRootAttribute("Inventory"));
+                        xml.Serialize(writer, list, ns);
+                    }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("[#]Conversion succesful!");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
+            }
+            catch (Exception e)
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ERROR]Conversion failed!" + e);
+                Console.BackgroundColor = ConsoleColor.Black;
             }
         }
     }

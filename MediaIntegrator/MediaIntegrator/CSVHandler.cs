@@ -24,20 +24,45 @@ namespace MediaIntegrator
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                if (e.GetBaseException().GetType() == typeof(System.IO.IOException))
+                {
+                    Console.WriteLine("[!]Multiple processes are trying to access this file. Trying to re-read...");
+                }
+                else if (e.GetBaseException().GetType() == typeof(CsvHelper.BadDataException))
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ERROR]Illegal CSV format! Aborting!");
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ERROR]The following error occured: " + e);
+                }
+                Console.BackgroundColor = ConsoleColor.Black;
                 return null;
             }
         }
 
         public void writeToCSV(List<Item> list)
         {
-            if (list != null)
+            try
             {
-                using (var writer = new StreamWriter("tillMediaShop/store.csv"))
-                using (var csv = new CsvWriter(writer))
+                if (list != null)
                 {
-                    csv.WriteRecords(list);
+                    using (var writer = new StreamWriter("tillMediaShop/store.csv"))
+                    using (var csv = new CsvWriter(writer))
+                    {
+                        csv.WriteRecords(list);
+                    }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("[#]Conversion succesful!");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
+            }catch(Exception e)
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ERROR]Conversion failed!" + e);
+                Console.BackgroundColor = ConsoleColor.Black;
             }
         }
     }
