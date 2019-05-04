@@ -26,10 +26,10 @@ namespace MediaIntegrator
 
         private void initialize()
         {
-            listenInputFromMediaShop();
+            listenOnOutputFolders();
         }
 
-        private void listenInputFromMediaShop()//This method will listen for changes in ../frMediaShop
+        private void listenOnOutputFolders()//This method will listen for changes in ../frMediaShop or ../frSimpleMedia
         {
             filewatcher.initialize();
         }
